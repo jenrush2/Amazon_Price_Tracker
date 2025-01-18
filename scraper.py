@@ -21,6 +21,8 @@ title = soup.find(id="productTitle").get_text(strip=True)
 
 print(title)
 
-price = soup.find(id="a-price-whole").get_text(strip=True)
+price = soup.find('span', {'class': 'a-price-whole'}).get_text(strip=True)
+#price = soup.find(id='a-price-whole').get_text(strip=True)
+
 
 print(price)
